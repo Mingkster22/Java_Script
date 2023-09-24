@@ -14,7 +14,7 @@ const yearElement = document.querySelector("#year");
 const imageElement = document.querySelector("img");
 
 /* Step 4 - Adding Content */
-nameElement.innerHTML = "<strong>${fullName}</strong>";
+nameElement.innerHTML = `<strong>${fullName}</strong>`;
 yearElement.textContent = currentYear;
 imageElement.setAttribute("src", profilePicture);
 
@@ -22,12 +22,11 @@ const altText = "Profile image of Minkee Yoon";
 imageElement.setAttribute("alt", altText);
 
 /* Step 5 - Array */
-const favoriteFoods = ["Pizza", "Hamburgers", "Fries", "Fruits", "Tacos"];
-foodElement.textContent = favoriteFoods.join(", ");
-const newFavoriteFood = "Sushi";
-favoriteFoods.push(newFavoriteFood);
-foodElement.innerHTML += <br>${favoriteFoods}</br>;
+let favoriteFoods = ["Pizza", "Hamburgers", "Fries", "Fruits", "Tacos"];
+foodElement.innerHTML = `${favoriteFoods}`;
+favoriteFoods.push("sushi");
+foodElement.innerHTML += `<br>${favoriteFoods}`;
 favoriteFoods.shift();
-foodElement.textContent = favoriteFoods.join(", ");
+foodElement.innerHTML += `<br>${favoriteFoods}`;
 favoriteFoods.pop();
-foodElement.textContent += "\n" + favoriteFoods.join(", ");
+foodElement.innerHTML += `<br>${favoriteFoods}`;
