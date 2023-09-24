@@ -3,25 +3,23 @@
 /* Step 1 - Setup type tasks - no code required */
 
 /* Step 2 - Variables */
-const fullName = "Minkee Yoon";
-const currentYear = "2023";
-const profilePicture =
-  "C:Usersymg26PicturesCodeCSE 121Bw02-taskimagesIMG_2668.PNG";
+let fullName = "Minkee Yoon";
+let currentYear = new Date().getFullYear();
+const profilePicture = "images/picture.png";
 
 /* Step 3 - Element Variables */
-const nameElement = document.getElementById(fullName);
+const nameElement = document.getElementById("name");
 const foodElement = document.getElementById("food");
-const yearElement = document.querySelector(currentYear);
-const imageElement = document.getElementById(profilePicture);
+const yearElement = document.querySelector("#year");
+const imageElement = document.querySelector("img");
 
 /* Step 4 - Adding Content */
-nameElement.innerHTML = <strong>${fullName}</strong>;
-currentYear = new Date().getFullYear();
-yearElement = document.getElementById("year");
+nameElement.innerHTML = "<strong>${fullName}</strong>";
 yearElement.textContent = currentYear;
-
 imageElement.setAttribute("src", profilePicture);
-imageElement.setAttribute("alt", profilePicture);
+
+const altText = "Profile image of Minkee Yoon";
+imageElement.setAttribute("alt", altText);
 
 /* Step 5 - Array */
 const favoriteFoods = ["Pizza", "Hamburgers", "Fries", "Fruits", "Tacos"];
