@@ -70,29 +70,29 @@ currentYear = currentDate.getFullYear();
 document.getElementById("year").textContent = currentYear;
 
 /* ARRAY METHODS - Functional Programming */
+
 /* Output Source Array */
-let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+const originalArray = Array.from({ length: 13 }, (_, i) => i + 1);
 
 /* Output Odds Only Array */
-document.querySelector("#odds").innerHTML = numbersArray.filter(
-  (number) => number % 2 !== 0
-);
+document.getElementById("array").textContent = originalArray.join(", ");
 
 /* Output Evens Only Array */
-document.querySelector("#evens").innerHTML = numbersArray.filter(
-  (number) => number % 2 === 0
-);
+const oddNumbers = originalArray.filter((num) => num % 2 !== 0);
+document.getElementById("odds").textContent = oddNumbers.join(", ");
 
 /* Output Sum of Org. Array */
-numbersArray.reduce((sum, number) => sum + number);
-document.getElementById("sumOfArray").textContent = sumOfArray;
+const evenNumbers = originalArray.filter((num) => num % 2 === 0);
+document.getElementById("evens").textContent = evenNumbers.join(", ");
 
 /* Output Sum of Org. Array */
+const sum = originalArray.reduce((acc, num) => acc + num, 0);
+document.getElementById("sumOfArray").textContent = sum;
 
 /* Output Multiplied by 2 Array */
-numbersArray.map((number) => number * 2);
-document.getElementById("multiplied").textContent = arrayBytwo;
+const multipliedArray = originalArray.map((num) => num * 2);
+document.getElementById("multiplied").textContent = multipliedArray.join(", ");
 
 /* Output Sum of Multiplied by 2 Array */
-sumOfArraytwo = numbersArray.reduce((sum, number) => sum + number);
-document.getElementById("sumOfMultiplied").textContent = sumOfArraytwo;
+const sumOfMultiplied = multipliedArray.reduce((acc, num) => acc + num, 0);
+document.getElementById("sumOfMultiplied").textContent = sumOfMultiplied;
