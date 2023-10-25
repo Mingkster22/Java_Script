@@ -1,0 +1,24 @@
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#searchInput {
+  width: 300px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+#searchButton {
+  padding: 10px 20px;
+}
+
+#movieResults {
+  margin-top: 20px;
+}
+
+#movieResults > img {
+  /* max-width: 90%;
+  min-width: 70%; */
+  width: 50%;
+}
