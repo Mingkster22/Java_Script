@@ -1,4 +1,3 @@
-// Replace with your API key, API host, and API URL
 const apiKey = "54e73fa138msh2542aa84a874bf1p146aadjsnbd71ebd916b4";
 const apiHost = "moviesdatabase.p.rapidapi.com";
 const apiUrl = "https://moviesdatabase.p.rapidapi.com/titles/search/keyword/";
@@ -36,9 +35,6 @@ async function searchSeries(query) {
 }
 
 function displaySeries(series) {
-  // Display series details as per your HTML structure
-  // Update this part based on the structure you want to use
-
   var resultString = "";
   for (var i = 0; i < series.entries; i++) {
     var result = series.results[i];
